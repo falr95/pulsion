@@ -1,1 +1,21 @@
-body{background-color: rgb(64,48,25);}
+body{background-color: rgb(64,48,25);font-family: abeat;}
+#musicianName{padding-top: 100px;}
+#musicianName #musicianInstrument{font-family: prototype;font-size: 39px;width: 16%;text-align: center;margin: auto;}
+#musicianName h1{font-family: prototype;margin: 0;text-align: center;font-size: 62px;}
+#musicianData{min-height: 500px;}
+#musicianData .left{float: left;width: 32%;text-align: center;}
+#musicianData .left a{color:#20a4b2;font-family: prototype;font-size: 40px;}
+#musicianData #avatar{margin: auto;margin-top: -85px;height: 400px;background-image: url(/images/hendrix.png);background-size: cover;background-repeat: no-repeat;width: 400px;border-radius: 300px;background-position: center;}
+#musicianData .right{float: right;width: 68%;}
+#musicianData .right ul{list-style: none;}
+#musicianData .right ul li{font-size: 40px;}
+#musicianData .right ul li a{color:#20a4b2;}
+#musicianData .right ul li.influencias, #musicianData .right ul li.compañeros{color:#20a4b2;}
+#musicianData .right ul li label{color:white; font-family: prototype;font-size: 46px;}
+#musicianData #redes img{width: 90px;}
+#musicianData #redes{margin: auto;padding-top: 10px;}
+
+#videoList{padding: 20px 6%;background-color: black;}
+
+#bio{padding: 1% 0;width: 85%;margin: auto;font-size: 23px;}
+#bio h2{font-size: 40px;font-family: prototype;margin: 0;}
