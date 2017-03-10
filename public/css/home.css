@@ -1,0 +1,4 @@
+body{background-color: #1e1b1c;}
+#cover{background-image:url("/images/portada1.png");background-repeat: none;background-position: center;background-size: cover;min-height: 700px;}
+#cover img{width: 100%;}
+#videoList{width: 90%;margin: auto;margin-top: -3%;background-color: rgba(0,0,0, 0.8)}

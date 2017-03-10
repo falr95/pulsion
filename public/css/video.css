@@ -1,0 +1,31 @@
+body{background-color: rgb(64,48,25);}
+#video{font-family:prototype;width: 100%;height: 650px;background-color: black;position: relative;}
+#video .videoData{padding-bottom: 15px;position: absolute;bottom: 0;width: 100%;}
+.videoData img, .videoData .text{vertical-align: middle;}
+.videoData .text h1{margin: 5px 0px;}
+.videoData .text h2{margin: 5px 0px;}
+#genreBar{}
+#genreBar span{vertical-align: top;height: 60px;display: inline-block;text-align: center;}
+#genreBar span *{text-align: center;}
+#genreBar #whatIsIt{width: 60%;margin: 0;}
+#genreBar #genre,#genreBar #send{width: 20%;margin: 0;}
+#genreBar #genre{font-size: 45px;font-family: prototype;}
+#genreBar #send button{cursor:pointer;border:none;background-color: transparent;width: 100%;height: 100%;font-size: 45px;font-family: prototype;}
+#genreBar #whatIsIt, #genreBar #whatIsIt select, #genreBar #whatIsIt option{font-family: abeat;font-size: 35px;}
+#genreBar #whatIsIt select{width: 25%;text-align: center;font-size: 30px;padding: 3px 0px;}
+#genreBar #whatIsIt p{margin: 0;padding-top: 10px;}
+#genreBar #whatIsIt p,#genreBar #whatIsIt select{display: inline-block;}
+#description{padding: 1% 0;width: 85%;margin: auto;font-size: 23px;}
+#videoList{width: 90%;margin: auto;background-color: rgba(0,0,0, 0.8);width: 75%;padding: 2% 0;}
+#videoList .left, #videoList .right{width: 49%;}
+#videoList h2{text-align: center;}
+#videoList .left{float: left;border-right:1px solid rgba(255,255,255, 0.4);}
+#videoList .right{float: right;}
+#videoList .videoContainer{margin-right: 10px;max-height: 600px;overflow: auto;}
+#videoList .video{overflow: hidden;height: 200px;margin-bottom: 4%;padding: 0 3%;}
+#videoList .videoThumb{width: 45%;margin: 0;margin-right: 3%;height: inherit;}
+#videoList .videoDesc{vertical-align: top;width: 47%;display: inline-block;}
+#videoList .videoDesc p{height: inherit;margin: 0;}
+#videoList .videoData img{width: 30%;}
+#videoList .videoData h2{margin:0;margin-left: -10px;margin-bottom: 5px;font-size: 22px;}
+#videoList .videoData h3{margin:0;margin-left: -10px;margin-top: 5px;}

@@ -6,6 +6,7 @@ var mongoClient = require('mongodb').MongoClient;
 var app = express();
 
 var indexController = require('./controllers/index');
+var videoController = require('./controllers/videos');
 
 mongoClient.connect('mongodb://ds157549.mlab.com:57549/pulsion', function(err,db) {
 	if (err) {
@@ -23,6 +24,12 @@ mongoClient.connect('mongodb://ds157549.mlab.com:57549/pulsion', function(err,db
 				app.set('view engine', 'hbs');
 				app.use(express.static(path.join(__dirname, 'public')));
 				app.get('/', indexController);
+				app.get('/video/:id', function(req,res){
+					res.render("video",{})
+				});
+				app.get('/musico/:id', function(req,res){
+					res.render("musico",{})
+				});
 				app.listen(3000, function() {
 					console.log('Escuchando en el puerto 3000');
 				});

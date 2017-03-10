@@ -1,0 +1,33 @@
+@font-face{
+	font-family: abeat;
+	src:url("/fonts/abeat.ttf");
+}
+@font-face{
+	font-family: prototype;
+	src:url("/fonts/prototype.ttf");
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+body{margin: 0;padding: 0;color: white;font-family: "abeat";}
+nav{position: fixed;width: 100%;z-index: 9999;}
+nav #searchBox{height: 60px;width: 33%;text-align: left;display: inline-block;vertical-align: middle;}
+nav #logo{height: 90px;width: 33%;text-align: center;display: inline-block;vertical-align: middle;}
+nav #optsButton{height: 45px;width: 33%;text-align: right;display: inline-block;vertical-align: middle;}
+nav img{height: 100%;}
+nav hr{border-color: rgba(255,255,255, 0.3);width: 90%;}
+
+.videoData{position: absolute;bottom: 0;width: 100%;}
+.videoData img, .videoData .text{display: inline-block;}
+.videoData .text h2{text-shadow: 2px 2px rgba(0,0,0,0.4);}
+.videoData .text h3{text-shadow: 2px 2px rgba(0,0,0,0.4);}
+
+.videoThumb{position:relative; width: 30%; height: 200px; margin: 1.5%;background-color: white;display: inline-block;}
+
+.fondo-ocre{background-color: #866323;}
+.fondo-verdeonda{background-color: #4dff95;}
+.fondo-marroncito{background-color: rgba(193,155,90,0.3);}
