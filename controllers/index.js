@@ -13,12 +13,17 @@ function getAllVideos(callback) {
 					callback(err, bandas);
 				} else {
 					// Comparamos los IDs para ver q video va con q banda
+					console.log(videos);
 					videos.forEach(function(video, videoIndex) {
 						video.nombreBandas = []; // Agregamos un campo para guardar los nombre de las bandas
+						bandas = bandas || []
+						video.bandas = video.bandas || []
 						bandas.forEach(function(banda, bandaIndex) {
 							for (var i = 0; i < video.bandas.length; i++) {
-								if (video.bandas[i].equals(banda._id)) {
-									video.nombreBandas[i] = banda.nombre; // Agregamos el nombre de la banda
+								if(bandas in video){
+									if (video.bandas[i].equals(banda._id)) {
+										video.nombreBandas[i] = banda.nombre; // Agregamos el nombre de la banda
+									}
 								}
 							}
 						});
@@ -38,7 +43,7 @@ var indexController = function(req, res) {
 	getAllVideos(function(err, docs) {
 		if (err == null) {
 			console.log("No hubieron errores");
-			res.render('index', docs);
+			res.render('index', {videos:docs});
 		} else {
 			console.log('Error al recuperar información de la base de datos');
 			console.log(err);

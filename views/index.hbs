@@ -13,15 +13,14 @@
 		<div ng-include="'/templates/nav.html'"></div>
 		<div id="cover"></div>
 		<div id="videoList">
-			{{#each this}}
+			{{#each videos}}
 				<div class="videoThumb">
-					{{@index}}
 					<div class="videoData">
 						<img src="/images/logoThumb.svg">
-						<div class="text">
+						<a href="/video/{{_id}}"class="text">
 							<h2>Tal Zapada</h2>
 							<h3>Tal Pulsion</h3>
-						</div>
+						</a>
 					</div>
 				</div>
 			{{/each}}

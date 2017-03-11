@@ -17,8 +17,8 @@ body{background-color: rgb(64,48,25);}
 #genreBar #whatIsIt p,#genreBar #whatIsIt select{display: inline-block;}
 #description{padding: 1% 0;width: 85%;margin: auto;font-size: 23px;}
 #videoList{width: 90%;margin: auto;background-color: rgba(0,0,0, 0.8);width: 75%;padding: 2% 0;}
-#videoList .left, #videoList .right{width: 49%;}
 #videoList h2{text-align: center;}
+#videoList .left, #videoList .right{width: 49%;}
 #videoList .left{float: left;border-right:1px solid rgba(255,255,255, 0.4);}
 #videoList .right{float: right;}
 #videoList .videoContainer{margin-right: 10px;max-height: 600px;overflow: auto;}

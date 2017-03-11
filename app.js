@@ -1,8 +1,10 @@
 var express = require('express');
 var path = require('path');
-var handlebars = require('express-handlebars');
+var hbs = require('hbs');
 var mongoClient = require('mongodb').MongoClient;
-
+hbs.registerHelper('log',function(options){
+	return Object.keys(options);
+});
 var app = express();
 
 var indexController = require('./controllers/index');
@@ -24,9 +26,7 @@ mongoClient.connect('mongodb://ds157549.mlab.com:57549/pulsion', function(err,db
 				app.set('view engine', 'hbs');
 				app.use(express.static(path.join(__dirname, 'public')));
 				app.get('/', indexController);
-				app.get('/video/:id', function(req,res){
-					res.render("video",{})
-				});
+				app.get('/video/:id', videoController);
 				app.get('/musico/:id', function(req,res){
 					res.render("musico",{})
 				});

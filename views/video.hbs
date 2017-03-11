@@ -15,20 +15,25 @@
 			<div class="videoData">
 				<img src="/images/logoVideoLanding.svg">
 				<div class="text">
-					<h1>Tal Video</h1>
-					<h1>Tal Pulsión</h1>
-					<h2>Fulano - Sultano - Mengano - Juanse</h2>
+					<h1>{{video.nombre}}</h1>
+					<h1>{{video.fecha}}</h1>
+					<h2>
+						{{#each video.roles}}
+							{{musico.nombre}} ({{instrumento}}) 
+						{{/each}}
+					</h2>
 				</div>
 			</div>
 		</div>
 		<div id="genreBar">
-			<span id="genre" class="fondo-marroncito">Funk</span><!--
+			<span id="genre" class="fondo-marroncito">{{video.genero}}</span><!--
 			--><span id="whatIsIt" class="fondo-ocre">
 				<p>¿ Para vos que es ?</p>
 				<select>
 					<option>Bossa</option>
 					<option>Rock</option>
 					<option>Tango</option>
+					<option>Salsa</option>
 				</select>
 			</span><!--
 			--><span id="send" class="fondo-verdeonda"><button>Enviar</button></span>
