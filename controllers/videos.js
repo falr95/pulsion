@@ -10,7 +10,7 @@ function getVideoData(videoId, callback) {
 	var colMusicos = app.db.collection('musicos');
 	// Agarramos todos los videos y las bandas
 	var data = {};
-	colVideos.findOne({_id:new mongo.ObjectID(videoId)}, function(err, video){
+	colVideos.find({_id:new mongo.ObjectID(videoId)}, []).toArray(function(err, video){
 		if(!err){
 			video.bandas = video.bandas || []
 			video.roles = video.roles || []
@@ -19,25 +19,18 @@ function getVideoData(videoId, callback) {
 				colBandas.find({$or:bandasMongoIds},[]).toArray(function(err,bandasBD){
 					if(!err){							
 						video.bandas = bandasBD;
-						var rolesMongoIds = video.roles.map(function(r){return {_id:new mongo.ObjectID(r)}})
-						colRoles.find({$or:rolesMongoIds},[]).toArray(function(err,rolesBD){
+						var rolesMongoIds = video.roles.map(function(r){return {_id:new mongo.ObjectID(r._id)}})
+						colMusicos.find({$or:rolesMongoIds},[]).toArray(function(err, musicosBD){
 							if(!err){
-								video.roles = rolesBD;
-								musicosMongoIds = video.roles.map(function(r){return {_id:new mongo.ObjectID(r.musico)}})
-								colMusicos.find({$or:musicosMongoIds},[]).toArray(function(err, musicosBD){
-									if(!err){
-										video.musicos = musicosBD;
-										musicosBD.forEach(function(musico){
-											video.roles.some(function(rol){
-												if(rol.musico = musico._id){
-													rol.musico = musico
-													return true;
-												}
-											})
-										})
-										callback(err, video)
-									}else{callback(err, video)}
+								musicosBD.forEach(function(musico){
+									video.roles.some(function(rol){
+										if(rol._id = musico._id){
+											rol.musico = musico
+											return true;
+										}
+									})
 								})
+								callback(err, video)
 							}else{callback(err, video)}
 						})
 					}else{
