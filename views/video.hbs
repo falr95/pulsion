@@ -21,7 +21,12 @@
 					<h1 class="videoFecha">{{video.fecha}}</h1>
 					<h2>
 						{{#each video.roles}}
-							{{musico.nombre}} ({{instrumento}}) 
+							<a href="/musico/{{musico._id}}">{{musico.nombre}} ({{instrumento}})</a>
+						{{/each}}
+					</h2>
+					<h2>
+						{{#each video.bandas}}
+							<a href="">{{nombre}}</a>
 						{{/each}}
 					</h2>
 				</div>

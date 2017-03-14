@@ -14,72 +14,39 @@
 	<body>
 		<div ng-include="'/templates/nav.html'"></div>
 		<div id="musicianName">
-			<h1 class="fondo-marroncito">Un Tal Hendrix</h1>
-			<div id="musicianInstrument" class="fondo-ocre">Guitarrista</div>
+			<h1 class="fondo-marroncito">{{musico.nombre}}</h1>
+			<div id="musicianInstrument" class="fondo-ocre">{{musico.instrumento}}</div>
 		</div>
 		<div id="musicianData" class="clearfix">
 			<div class="left">
-				<div id="avatar"></div>
+				<div id="avatar" style="background-image: url('{{avatar musico.avatar}}');"></div>
 				<a href="#bio">Biografía</a>
 				<div id="redes">
-					<a href=""><img src="/images/scloud.svg"></a>
-					<a href=""><img src="/images/twitter.svg"></a>
-					<a href=""><img src="/images/facebook.svg"></a>
-					<a href=""><img src="/images/bc.svg"></a>
-					<a href=""><img src="/images/instagram.svg"></a>
+					{{redes musico.redes}}
 				</div>
 			</div>
 			<div class="right">
 				<ul>
-					<li><label>Banda: </label>Los inadaptados de siempre</li>
-					<li><label>Barrio: </label>República de Parque Avellaneda</li>
-					<li><label>Géneros: </label>Blues/Rock, Soul, R&B</li>
-					<li><label>Edad: </label>27</li>
+					<li><label>Bandas: </label>{{#each musico.bandas}}<a href="http://{{link}}">{{nombre}}</a>{{#unless @last}}, {{/unless}}{{/each}}</li>
+					<li><label>Barrio: </label>{{musico.barrio}}</li>
+					<li><label>Géneros: </label>{{#each musico.generos}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</li>
+					<li><label>Edad: </label>{{age musico.edad}}</li>
 					<li class="influencias">
 						<label>Influencias: </label>
-						<a href="">Zappa</a>, <a href="">Floyd</a>, <a href="">Cream</a>, <a href="">Clapton</a>, <a href="">YES</a>, <a href="">ELP</a>
+						{{#each musico.influencias}}<a href="http://{{link}}">{{nombre}}</a>{{#unless @last}}, {{/unless}}{{/each}}
 					</li>
 					<li class="compañeros">
 						<label>Tocó en Pulsión con: </label>
-						<a href="">Lean</a>, <a href="">Marian</a>, <a href="">Guille</a>, <a href="">Ostu</a>, <a href="">El diego</a>, <a href="">Cani</a>, <a href="">Ruggeri</a>, <a href="">+</a>
+						{{#each musico.partners}}<a href="/musico/{{_id}}">{{nombre}}</a>{{#unless @last}}, {{/unless}}{{/each}}
 					</li>
 				</ul>
 			</div>
 		</div>
 		<div id="videoList">
-			<div class="videoThumb">
-				<div class="videoData">
-					<img src="/images/logoThumb.svg">
-					<div class="text">
-						<h2>Tal Zapada</h2>
-						<h3>Tal Pulsion</h3>
-					</div>
-				</div>
-			</div><!--
-			--><div class="videoThumb">
-				<div class="videoData">
-					<img src="/images/logoThumb.svg">
-					<div class="text">
-						<h2>Tal Zapada</h2>
-						<h3>Tal Pulsion</h3>
-					</div>
-				</div>
-			</div><!--
-			--><div class="videoThumb">
-				<div class="videoData">
-					<img src="/images/logoThumb.svg">
-					<div class="text">
-						<h2>Tal Zapada</h2>
-						<h3>Tal Pulsion</h3>
-					</div>
-				</div>
-			</div>
+			{{#each musico.videos}}<li class="videoThumb"><div class="videoData"><img src="/images/logoThumb.svg"><a href="/video/{{_id}}" class="text"><h2>Tal Zapada</h2><h3>Tal Pulsion</h3></a></div></li>{{/each}}
 		</div>
 		<div id="bio">
-			<h2>Bio</h2>
-			<p>
-				Sed ante nulla, commodo imperdiet turpis et, ultrices eleifend ligula. Nam nisl mi, luctus a ipsum nec, mattis tincidunt tellus. Nunc id porttitor orci. Etiam mattis dictum purus a finibus. Nullam placerat porta venenatis. Morbi varius diam a iaculis aliquam. Phasellus cursus vitae lorem nec scelerisque. Proin egestas tristique finibus. Praesent consectetur sem quis quam sodales, sit amet tincidunt ligula vestibulum. Suspendisse mattis blandit lacus, vel rhoncus dui luctus ac. Sed sit amet mi quis turpis ullamcorper tempor. Vivamus ut arcu ultricies, efficitur quam sit amet, tempor sapien. Nunc nec est laoreet, bibendum erat sed, malesuada massa. Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-			</p>
+			<h2>Bio</h2><p>{{musico.bio}}</p>
 		</div>
 	</body>
 </html>

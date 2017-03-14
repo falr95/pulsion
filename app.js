@@ -2,13 +2,12 @@ var express = require('express');
 var path = require('path');
 var hbs = require('hbs');
 var mongoClient = require('mongodb').MongoClient;
-hbs.registerHelper('log',function(options){
-	return Object.keys(options);
-});
+var helpers = require("./customHbs").create(hbs);
 var app = express();
 
 var indexController = require('./controllers/index');
 var videoController = require('./controllers/videos');
+var musicoController = require('./controllers/musicos');
 
 mongoClient.connect('mongodb://ds157549.mlab.com:57549/pulsion', function(err,db) {
 	if (err) {
@@ -27,11 +26,10 @@ mongoClient.connect('mongodb://ds157549.mlab.com:57549/pulsion', function(err,db
 				app.use(express.static(path.join(__dirname, 'public')));
 				app.get('/', indexController);
 				app.get('/video/:id', videoController);
-				app.get('/musico/:id', function(req,res){
-					res.render("musico",{})
-				});
-				app.listen(3000, function() {
-					console.log('Escuchando en el puerto 3000');
+				app.get('/musico/:id', musicoController);
+				var port = 3000;
+				app.listen(port, function() {
+					console.log('Escuchando en el puerto'+port);
 				});
 			} else {
 				db.close();
