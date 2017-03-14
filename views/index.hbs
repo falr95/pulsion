@@ -8,22 +8,13 @@
 		<script type="text/javascript" src="/js/main.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/general.css">
 		<link rel="stylesheet" type="text/css" href="/css/home.css">
+		<link rel="stylesheet" type="text/css" href="/css/mobile/general.css">
 	</head>
 	<body>
 		<div ng-include="'/templates/nav.html'"></div>
 		<div id="cover"></div>
-		<div id="videoList">
-			{{#each videos}}
-				<div class="videoThumb">
-					<div class="videoData">
-						<img src="/images/logoThumb.svg">
-						<a href="/video/{{_id}}"class="text">
-							<h2>Tal Zapada</h2>
-							<h3>Tal Pulsion</h3>
-						</a>
-					</div>
-				</div>
-			{{/each}}
-		</div>
+		<ul id="videoList">
+			{{#each videos}}<li class="videoThumb"><div class="videoData"><img src="/images/logoThumb.svg"><a href="/video/{{_id}}" class="text"><h2>Tal Zapada</h2><h3>Tal Pulsion</h3></a></div></li>{{/each}}
+		</ul>
 	</body>
 </html>

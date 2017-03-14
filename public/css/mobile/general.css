@@ -1,0 +1,40 @@
+/* NOTEBOOKS */
+@media (min-width:1024px) and (max-width: 1400px){
+	nav #optsButton{height: 33px;} 
+	nav #searchBox{height: 40px;}
+	nav #logo{height: 55px;}
+	nav #searchFields label {font-size: 16px;}
+	#cover{min-height: 450px;}
+	.videoThumb{height: 170px;}
+	nav #opts a{font-size: 20px;}
+}
+/* TABLETS */
+@media (min-width:768px) and (max-width: 1024px) and (orientation: portrait){
+	nav #optsButton{height: 33px;} 
+	nav #searchBox{height: 40px;}
+	nav #logo{height: 55px;}
+	#cover{min-height: 450px;background-position-x: 0px;}
+	nav #searchFields label {font-size: 16px;}
+	nav #opts a{font-size: 20px;}
+	.videoThumb {width: 48%;margin: 1%;}
+}
+@media (min-width:768px) and (max-width: 1024px) and (orientation: landscape){
+	nav #optsButton{height: 33px;} 
+	nav #searchBox{height: 40px;}
+	nav #logo{height: 55px;}
+	#cover{min-height: 450px;background-position-x: 0px;}
+	nav #searchFields label {font-size: 16px;}
+	nav #opts a{font-size: 20px;}
+}
+/* CELULARES */
+@media (min-width:300px) and (max-width: 760px){
+	nav #searchBox {height: 35px;}
+	nav #logo{height: 45px;}
+	nav #optsButton{height: 25px;} 
+	#cover{min-height: 300px;background-position-x: -37px;}
+	.videoThumb {width: 100%;}
+	nav #opts a{font-size: 12px;}
+	nav #opts {width: 85%;padding: 10px 0px;}
+	nav #searchFields label {font-size: 12px;}
+	nav #searchFields input {font-size: 10px;}
+}

@@ -7,7 +7,9 @@
 		<script type="text/javascript" src="/js/angular.min.js"></script>
 		<script type="text/javascript" src="/js/main.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/general.css">
+		<link rel="stylesheet" type="text/css" href="/css/mobile/general.css">
 		<link rel="stylesheet" type="text/css" href="/css/video.css">
+		<link rel="stylesheet" type="text/css" href="/css/mobile/video.css">
 	</head>
 	<body>
 		<div ng-include="'/templates/nav.html'"></div>
@@ -15,8 +17,8 @@
 			<div class="videoData">
 				<img src="/images/logoVideoLanding.svg">
 				<div class="text">
-					<h1>{{video.nombre}}</h1>
-					<h1>{{video.fecha}}</h1>
+					<h1 class="videoName">{{video.nombre}}</h1>
+					<h1 class="videoFecha">{{video.fecha}}</h1>
 					<h2>
 						{{#each video.roles}}
 							{{musico.nombre}} ({{instrumento}}) 

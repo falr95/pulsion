@@ -18,15 +18,15 @@
     100% {opacity: 1;}
 }
 body{margin: 0;padding: 0;color: white;font-family: "abeat";}
-nav{position: fixed;width: 100%;z-index: 9999;}
-nav #searchBox{height: 60px;width: 33%;text-align: left;display: inline-block;vertical-align: middle;}
-nav #logo{height: 90px;width: 33%;text-align: center;display: inline-block;vertical-align: middle;}
-nav #optsButton{height: 45px;width: 33%;text-align: right;display: inline-block;vertical-align: middle;}
+nav{position: fixed;width: 100%;z-index: 9999;text-align: center;}
+nav #searchBox{height: 60px;width: 30%;text-align: left;display: inline-block;vertical-align: middle;}
+nav #logo{height: 90px;width: 30%;text-align: center;display: inline-block;vertical-align: middle;}
+nav #optsButton{height: 45px;width: 30%;text-align: right;display: inline-block;vertical-align: middle;}
 nav img{height: 100%;}
 nav hr{border-color: rgba(255,255,255, 0.3);width: 90%;}
-nav #opts{display:none;opacity:0;width: 80%;text-align: center;margin: auto;padding: 23px 0px;background-color: rgba(0, 0, 0, 0.2);}
+nav #opts{display:none;opacity:0;width: 80%;text-align: center;margin: auto;padding: 23px 0px;background-color: rgba(0, 0, 0, 0.65);}
 nav #opts a{color:#20a4b2; font-size: 25px;}
-nav #searchFields{display:none; margin: auto;text-align: center; font-size: }
+nav #searchFields{margin: 0 10px;background-color: rgba(0, 0, 0, 0.65);display:none; margin: auto;text-align: center; font-size: 20px;}
 nav #searchFields label{font-size: 25px;}
 nav #searchFields input{border-radius: 30px;font-size: 20px;}
 nav #opts.show, nav #searchFields.show{display:block;animation-name: fadeIn;animation-fill-mode: both;animation-direction: alternate;animation-duration: 1s;}
@@ -36,7 +36,7 @@ nav #opts.show, nav #searchFields.show{display:block;animation-name: fadeIn;anim
 .videoData .text h2{text-shadow: 2px 2px rgba(0,0,0,0.4);}
 .videoData .text h3{text-shadow: 2px 2px rgba(0,0,0,0.4);}
 
-.videoThumb{position:relative; width: 30%; height: 200px; margin: 1.5%;background-color: white;display: inline-block;}
+.videoThumb{position:relative; width: 30%; height: 200px;margin: 1%;background-color: white;display: inline-block;}
 
 .fondo-ocre{background-color: #866323;}
 .fondo-verdeonda{background-color: #4dff95;}

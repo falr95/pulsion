@@ -1,0 +1,65 @@
+/* NOTEBOOKS */
+@media (min-width:1024px) and (max-width: 1400px){
+	#video{height: 550px;}
+	#video .videoData img{width: 200px;padding-left: 5%;}
+	#description{font-size: 17px;}
+	#genreBar #whatIsIt, #genreBar #whatIsIt select, #genreBar #whatIsIt option{font-size: 26px;}
+	#genreBar #genre {font-size: 37px;line-height: 54px;}
+	#genreBar #send button {font-size: 37px;}
+	.text h1, .text h2 {font-size: 24px;}
+	#videoList .videoThumb {width: 54%;}
+	#videoList .videoDesc p {font-size: 11px;}
+	#videoList .videoThumb {width: 45%;}
+	#videoList .video {height: 160px}
+	#videoList .videoData h2 {font-size: 19px;}
+	#videoList .videoData h3 {font-size: 17px;}
+}
+/* TABLETS */
+@media (min-width:300px) and (max-width: 1024px){
+	#genreBar #genre, #genreBar #send {width: 100%;}
+	#genreBar #whatIsIt {width: 100%;margin: 0;height: auto;}
+	#genreBar #send button {font-size: 37px;}
+	#genreBar #genre {font-size: 37px;line-height: 54px;}
+	#genreBar #whatIsIt{padding-bottom: 12px;}
+	#genreBar #whatIsIt, #genreBar #whatIsIt select, #genreBar #whatIsIt option{font-size: 26px;}
+	#genreBar #whatIsIt select {width: 40%;}
+	#video{height: 420px;}
+	#video .videoData img{width: 30%;padding-left: 0%;}
+	.videoData .text {width: 65%;}
+	.videoData .text h1.videoName {font-size: 20px;}
+	.videoData .text h1.videoFecha {font-size: 15px;}
+	.videoData .text h2 {font-size: 10px;}
+	#videoList{width: 100%}
+	#description p{font-size: 13px;}
+	#videoList .videoThumb {width: 100%;display: block;height: 155px;}
+	#videoList .video {height: 230px;margin-bottom: 9%;}
+	#videoList .videoDesc p {font-size: 10px;padding-top: 7px;}
+	#videoList .videoDesc {width: 100%;}
+	#videoList h2 {font-size: 17px;}
+	#videoList .videoContainer h2 {text-align: left;}
+	#description p{font-size: 16px;}
+}
+@media (min-width:768px) and (max-width: 1024px) and (orientation: portrait){
+	#video {height: 500px;}
+	.videoData .text h1.videoName {font-size: 25px;}
+	.videoData .text h1.videoFecha {font-size: 20px;}
+	.videoData .text h2 {font-size: 15px;}
+}
+@media (min-width:768px) and (max-width: 1024px) and (orientation: landscape){
+	#videoList {width: 100%;}
+	#video .videoData img {width: 16%;}
+	.videoData .text h1.videoName {font-size: 30px;}
+	.videoData .text h1.videoFecha {font-size: 25px;}
+	.videoData .text h2 {font-size: 20px;}
+}
+/* CELULARES */
+@media (min-width:300px) and (max-width: 760px) and (orientation: portrait){
+	#videoList .videoThumb {width: 100%;display: block;height: 125px;}
+	.videoData .text {width: 96%;padding-left: 8px;}
+	.videoThumb .videoData img {display: none;}
+	#videoList .videoData h3{margin-left: 0px;}
+	#videoList .videoData h2 {font-size: 18px;text-align: left;margin-left: 0px;}
+}
+@media (min-width:300px) and (max-width: 760px) and (orientation: landscape){
+	#video {height: 260px;}
+}

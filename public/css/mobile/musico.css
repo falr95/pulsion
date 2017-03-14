@@ -1,0 +1,50 @@
+/* NOTEBOOKS */
+@media (min-width:768px) and (max-width: 1400px){
+	#musicianData #redes img {width: 17%;}
+	#musicianData #avatar {height: 270px;width: 270px;}
+	#musicianData .right ul li label {font-size: 35px;}
+	#musicianData .right ul li {font-size: 27px;}
+	#musicianData {min-height: 350px;}
+	#bio p{font-size: 18px;}
+	#musicianName {padding-top: 65px;}
+}
+/* TABLETS */
+@media (min-width:768px) and (max-width: 1024px){
+
+}
+@media (min-width:768px) and (max-width: 1024px) and (orientation: portrait){
+	#musicianName{padding-top: 65px;}
+	#musicianData #redes img {width: 10%;}
+	#musicianData #avatar {margin: auto;margin-top: 10px;height: 250px;width: 250px;}
+	#musicianData .left, #musicianData .right{float: none;clear: both;width: 100%;}
+	#musicianData .right ul{padding: 0px 5%;}
+	#musicianData .right ul li{font-size: 25px;display: inline;}
+	#musicianData .right ul li label{font-size: 30px;}
+	#musicianName #musicianInstrument {font-size: 30px;width: 35%;}
+	#musicianName h1{font-size: 40px;}
+	#bio p{font-size: 13px;}
+	#videoList {padding: 20px 3%;}
+}
+@media (min-width:768px) and (max-width: 1024px) and (orientation: landscape){
+	#musicianName #musicianInstrument {width: 27%;}
+}
+/* CELULARES */
+@media (min-width:300px) and (max-width: 760px){
+	#musicianName{padding-top: 55px;}
+	#musicianData #avatar {margin: auto;margin-top: 10px;height: 250px;width: 250px;}
+	#musicianData .left, #musicianData .right{float: none;clear: both;width: 100%;}
+	#musicianData .right ul{padding: 0px 5%;}
+	#musicianData .right ul li{font-size: 25px;}
+	#musicianData .right ul li label{font-size: 30px;}
+	#musicianName #musicianInstrument {font-size: 30px;width: 35%;}
+	#musicianName h1{font-size: 40px;}
+	#bio p{font-size: 13px;}
+}
+@media (min-width:300px) and (max-width: 760px) and (orientation: portrait){
+	#musicianData .right ul li{font-size: 20px;}
+	#musicianData .right ul li label{font-size: 25px;}
+	#musicianData #redes img {width: 50px;}
+}
+@media (min-width:300px) and (max-width: 760px) and (orientation: landscape){
+	
+}

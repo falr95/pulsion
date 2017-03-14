@@ -1,0 +1,17 @@
+/* NOTEBOOKS */
+@media (min-width:1024px) and (max-width: 1400px){
+	
+}
+/* TABLETS */
+@media (min-width:768px) and (max-width: 1024px) and (orientation: portrait){
+}
+@media (min-width:768px) and (max-width: 1024px) and (orientation: landscape){
+	
+}
+/* CELULARES */
+@media (min-width:300px) and (max-width: 768px) and (orientation: portrait){
+	
+}
+@media (min-width:300px) and (max-width: 768px) and (orientation: landscape){
+	
+}
