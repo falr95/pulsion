@@ -4,7 +4,7 @@ function getAllVideos(callback) {
 	var colVideos = app.db.collection('videos');
 	var colBandas = app.db.collection('bandas');
 	// Agarramos todos los videos y las bandas
-	colVideos.find({}, ['bandas', 'link', 'zapada', 'fecha', 'cancion.nombre']).sort('fecha', -1).toArray(function(err, videos) {
+	colVideos.find({}, ['bandas', 'link', 'zapada', 'nombre', 'fecha', 'cancion.nombre']).sort('fecha', -1).toArray(function(err, videos) {
 		if (err != null) {
 			callback(err, videos);
 		} else {

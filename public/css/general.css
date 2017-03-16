@@ -15,9 +15,15 @@
 }
 @keyframes fadeIn {
     0%   {opacity: 0;}
-    100% {opacity: 1;}
+    100% {opacity: 1;display: block;}
+}
+@keyframes fadeOut {
+    0%   {opacity: 1;display: block;}
+    99% {opacity: 0;}
+    100% {display: none;}
 }
 body{margin: 0;padding: 0;color: white;font-family: "abeat";}
+a{color: inherit;}
 nav{position: fixed;width: 100%;z-index: 9999;text-align: center;}
 nav #searchBox{height: 60px;width: 30%;text-align: left;display: inline-block;vertical-align: middle;}
 nav #logo{height: 90px;width: 30%;text-align: center;display: inline-block;vertical-align: middle;}
@@ -32,11 +38,11 @@ nav #searchFields input{border-radius: 30px;font-size: 20px;}
 nav #opts.show, nav #searchFields.show{display:block;animation-name: fadeIn;animation-fill-mode: both;animation-direction: alternate;animation-duration: 1s;}
 
 .videoData{position: absolute;bottom: 0;width: 100%;}
-.videoData img, .videoData .text{display: inline-block;}
-.videoData .text h2{text-shadow: 2px 2px rgba(0,0,0,0.4);}
-.videoData .text h3{text-shadow: 2px 2px rgba(0,0,0,0.4);}
+.videoData img, .videoData .text{display: inline-block;max-width: 66%;}
+.videoData .text h2{text-shadow: 2px 2px rgba(0,0,0,0.4);font-size: 22px;margin: 0;max-width: 100%;}
+.videoData .text h3{text-shadow: 2px 2px rgba(0,0,0,0.4);font-size: 13px;margin: 0;max-width: 100%;}
 
-.videoThumb{position:relative; width: 30%; height: 200px;margin: 1%;background-color: white;display: inline-block;}
+.videoThumb{background-position: center center;background-size: cover;background-repeat: no-repeat;position:relative; width: 30%; height: 200px;margin: 1%;display: inline-block;}
 
 .fondo-ocre{background-color: #866323;}
 .fondo-verdeonda{background-color: #4dff95;}

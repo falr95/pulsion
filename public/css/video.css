@@ -1,9 +1,24 @@
 body{background-color: rgb(64,48,25);}
-#video{font-family:prototype;width: 100%;height: 650px;background-color: black;position: relative;}
-#video .videoData{padding-bottom: 15px;position: absolute;bottom: 0;width: 100%;}
+#video{position:relative;font-family:prototype;width: 100%;height: 650px;background-color: black;position: relative;background-size: cover;background-repeat: no-repeat;background-position: center;cursor: pointer;}
+#video .videoData{background-color: rgba(0,0,0, 0.3);padding-bottom: 15px;position: absolute;bottom: 0;width: 100%;}
 .videoData img, .videoData .text{vertical-align: middle;}
 .videoData .text h1{margin: 5px 0px;}
 .videoData .text h2{margin: 5px 0px;}
+.playbackBtn{border: 0px;background-size: cover;cursor: pointer;background-color: transparent;}
+#controls{display:none;position: absolute;bottom: 0px;height: 10%;width: 35%;}
+#social{display:none;position: absolute;width: 6%;height: 35%;right: 0;top: 27%;}
+#controls button{display: inline-block;width: 50px;height: 50px;}
+#social button{display: block;width: 50px;height: 50px;margin: auto;margin-bottom: 7px;}
+#playBtn{background-image: url(/images/playBtn.svg);width: 75px;height: 75px;position: absolute;left: 47%;top: 36%;}
+#resumeBtn{background-image: url('/images/playBtn.svg');}
+#pauseBtn{background-image: url('/images/pauseBtn.svg');}
+#fsBtn{background-image: url('/images/fsBtn.svg');}
+#shareBtn{background-image: url('/images/shareIcon.svg');}
+#musicosBtn{background-image: url('/images/musicosIcon.svg');}
+#player{position: absolute; width: 100%;height: 100%;display: none;}
+#player.show, #social.show{display: block;animation-name: fadeIn;animation-fill-mode: forwards;animation-duration: 1s;}
+#videoInfo.show{display:block!important;animation-name: fadeIn;animation-fill-mode: forwards;animation-duration: 1s;}
+#videoInfo.hide, #playBtn.hide{display:none;animation-name: fadeIn;animation-fill-mode: backwards;animation-duration: 1s;}
 #genreBar{}
 #genreBar span{vertical-align: top;height: 60px;display: inline-block;text-align: center;}
 #genreBar span *{text-align: center;}

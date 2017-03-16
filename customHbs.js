@@ -1,7 +1,7 @@
 module.exports = {
 	create: function(hbs){
 		hbs.registerHelper('log',function(options){
-			return Object.keys(options);
+			console.log(options)
 		});
 		hbs.registerHelper('avatar',function(imageSrc){
 			if(imageSrc[0] == "/"){

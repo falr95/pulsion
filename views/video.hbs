@@ -5,16 +5,30 @@
 		<meta name="viewport" content="width=device-width">
 		<title>Pulsión - where the magic begins</title>
 		<script type="text/javascript" src="/js/angular.min.js"></script>
+		<script src="https://apis.google.com/js/api.js" ></script>
+		<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 		<script type="text/javascript" src="/js/main.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/general.css">
 		<link rel="stylesheet" type="text/css" href="/css/mobile/general.css">
 		<link rel="stylesheet" type="text/css" href="/css/video.css">
 		<link rel="stylesheet" type="text/css" href="/css/mobile/video.css">
 	</head>
-	<body>
+	<body ng-controller="mainCtrl">
+	{{log video}}
 		<div ng-include="'/templates/nav.html'"></div>
-		<div id="video">
-			<div class="videoData">
+		<div id="video" set-player={{video.link}}>
+			<div id="player"></div>
+			<div id="controls">
+				<button id="resumeBtn" class="playbackBtn"></button>
+				<button id="pauseBtn" class="playbackBtn"></button>
+				<button id="fsBtn" class="playbackBtn"></button>
+			</div>
+			<button id="playBtn" class="playbackBtn"></button>
+			<div id="social">
+				<button id="shareBtn" class="playbackBtn"></button>
+				<button id="musicosBtn" toggler="show" target="#videoInfo" class="playbackBtn"></button>
+			</div>
+			<div id="videoInfo" class="videoData">
 				<img src="/images/logoVideoLanding.svg">
 				<div class="text">
 					<h1 class="videoName">{{video.nombre}}</h1>
