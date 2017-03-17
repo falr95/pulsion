@@ -9,13 +9,28 @@
 		<script type="text/javascript" src="/js/main.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/general.css">
 		<link rel="stylesheet" type="text/css" href="/css/home.css">
+		<link rel="stylesheet" type="text/css" href="/css/mobile/home.css">
 		<link rel="stylesheet" type="text/css" href="/css/mobile/general.css">
 	</head>
 	<body ng-controller="mainCtrl">
 		<div ng-include="'/templates/nav.html'"></div>
-		<div id="cover"></div>
+		<div id="cover" carousel>
+			<div id="introText">
+				<img src="/images/logo.png">
+				<h1><a href="/about">Conocé a los que lo hacemos</a></h1>
+			</div>
+			<carousel-item src="portada1.jpg"></carousel-item>
+			<carousel-item src="portada2.jpg"></carousel-item>
+			<carousel-item src="portada3.jpg"></carousel-item>
+			<carousel-item src="portada4.jpg"></carousel-item>
+			<carousel-item src="portada5.jpg"></carousel-item>
+			<carousel-item src="portada6.jpg"></carousel-item>
+			<carousel-item src="portada7.jpg"></carousel-item>
+			<carousel-item src="portada8.jpg"></carousel-item>
+			<carousel-item src="portada9.jpg"></carousel-item>
+		</div>
 		<ul id="videoList">
-			{{#each videos}}<li class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><a href="/video/{{_id}}" class="text"><h2>{{this.nombre}}</h2><h3>{{fecha}}</h3></a></div></li>{{/each}}
+			{{#each videos}}<a href="/video/{{_id}}"><li class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><div class="text"><h2>{{this.nombre}}</h2><h3>{{fecha}}</h3></div></div></li></a>{{/each}}
 		</ul>
 	</body>
 </html>

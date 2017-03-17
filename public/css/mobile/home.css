@@ -10,8 +10,12 @@
 }
 /* CELULARES */
 @media (min-width:300px) and (max-width: 768px) and (orientation: portrait){
-	
+	#cover #introText {margin-top: 67%;font-size: 11px;}
+	#cover #introText img {width: 56%;}
+	#cover #introText h1 {margin-top: 0;}
+	.videoData img, .videoData .text {max-width: 100%;}
 }
 @media (min-width:300px) and (max-width: 768px) and (orientation: landscape){
-	
+	#cover h1 {text-shadow: 5px 4px 7px rgba(0,0,0,0.6);margin-top: 23%;}
+	#cover #introText img {width: 35%;padding-top: 5%;}
 }

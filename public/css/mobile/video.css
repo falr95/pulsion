@@ -59,7 +59,19 @@
 	.videoThumb .videoData img {display: none;}
 	#videoList .videoData h3{margin-left: 0px;}
 	#videoList .videoData h2 {font-size: 18px;text-align: left;margin-left: 0px;}
+	#playBtn{left: 38%;}
+	#player{width: 100%!important;}
+	video{width: 100%!important;}
+	iframe{width: 100%!important;}
+	#social{right: 0%;width: 24%;top: 14%;}
+	#social button {display: inline-block;width: 30px;height: 30px;}
 }
 @media (min-width:300px) and (max-width: 760px) and (orientation: landscape){
 	#video {height: 260px;}
+	#player{width: 100%!important;}
+	video{width: 100%!important;}
+	iframe{width: 100%!important;}
+	#social{right: 1%;width: 12%;top: 24%;}
+	#social button {display: block;width: 30px;height: 30px;}
+	#video .videoData {height: 110px;}
 }

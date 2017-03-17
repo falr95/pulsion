@@ -19,6 +19,34 @@ app.factory("youtubeClient", [function(clientCallback){
 app.controller('mainCtrl',["$scope","youtubeClient", function($scope, youtubeClient){
 	$scope.youtube = youtubeClient;
 }])
+app.directive("carousel",function(){
+	return{
+		link:function($scope, element, attrs){
+			var items = element.find("carousel-item").find("div");
+			var currentItem = 0;
+			if(items.length > 1){
+				angular.element(items[currentItem]).toggleClass("display")
+				var interval = setInterval(function(){
+					angular.element(items[currentItem]).addClass("out")
+					angular.element(items[currentItem]).removeClass("display")
+					currentItem < items.length-1 ? currentItem += 1 : currentItem = 0;
+					angular.element(items[currentItem]).removeClass("out")
+					angular.element(items[currentItem]).addClass("display")
+				},5000)
+			}
+		}
+	}
+})
+app.directive("carouselItem",function(){
+	return{
+		template:"<div></div>",
+		replace:false,
+		link: function($scope, element, attrs){
+			console.log(element.find("div"), attrs.src, "url('/images/cover/"+attrs.src+"')");
+			element.find("div").css("background-image","url('/images/cover/"+attrs.src+"')")
+		}
+	}
+})
 app.directive("toggler",function(){
 	return{
 		link:function($scope, element, attrs){
@@ -63,8 +91,6 @@ app.directive("setPlayer",function(){
 						videoInfoTag.toggleClass("hide");
 						var player;
 				        player = new YT.Player('player', {
-					        height: '390',
-					        width: '640',
 					        playerVars:{
 					        	autoplay:true,
 					        	controls: 2,
