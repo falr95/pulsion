@@ -15,7 +15,7 @@
 		<div ng-include="'/templates/nav.html'"></div>
 		<div id="cover"></div>
 		<ul id="videoList">
-			{{#each videos}}{{log this}}<li class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><a href="/video/{{_id}}" class="text"><h2>{{this.nombre}}</h2><h3>{{fecha}}</h3></a></div></li>{{/each}}
+			{{#each videos}}<li class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><a href="/video/{{_id}}" class="text"><h2>{{this.nombre}}</h2><h3>{{fecha}}</h3></a></div></li>{{/each}}
 		</ul>
 	</body>
 </html>

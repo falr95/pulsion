@@ -5,13 +5,14 @@
 		<meta name="viewport" content="width=device-width">
 		<title>Pulsión - where the magic begins</title>
 		<script type="text/javascript" src="/js/angular.min.js"></script>
+		<script src="https://apis.google.com/js/api.js" ></script>
 		<script type="text/javascript" src="/js/main.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/general.css">
 		<link rel="stylesheet" type="text/css" href="/css/mobile/general.css">
 		<link rel="stylesheet" type="text/css" href="/css/musico.css">
 		<link rel="stylesheet" type="text/css" href="/css/mobile/musico.css">
 	</head>
-	<body>
+	<body ng-controller="mainCtrl">
 		<div ng-include="'/templates/nav.html'"></div>
 		<div id="musicianName">
 			<h1 class="fondo-marroncito">{{musico.nombre}}</h1>
@@ -43,7 +44,8 @@
 			</div>
 		</div>
 		<div id="videoList">
-			{{#each musico.videos}}<li class="videoThumb"><div class="videoData"><img src="/images/logoThumb.svg"><a href="/video/{{_id}}" class="text"><h2>Tal Zapada</h2><h3>Tal Pulsion</h3></a></div></li>{{/each}}
+			{{#each musico.videos}}
+			<a href="/video/{{_id}}"><li class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><div href="" class="text"><h2>Tal Zapada</h2><h3>Tal Pulsion</h3></div></div></li></a>{{/each}}
 		</div>
 		<div id="bio">
 			<h2>Bio</h2><p>{{musico.bio}}</p>

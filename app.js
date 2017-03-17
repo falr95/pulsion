@@ -27,6 +27,12 @@ mongoClient.connect('mongodb://ds157549.mlab.com:57549/pulsion', function(err,db
 				app.get('/', indexController);
 				app.get('/video/:id', videoController);
 				app.get('/musico/:id', musicoController);
+				app.use(function(req, res, next) {
+				  var err = new Error('Not Found');
+				  err.status = 404;
+				  res.render('404');
+				});
+
 				var port = 3000;
 				app.listen(port, function() {
 					console.log('Escuchando en el puerto'+port);

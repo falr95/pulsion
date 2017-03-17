@@ -86,6 +86,7 @@ var musicoController = function(req, res) {
 		} else {
 			console.log('Error al recuperar información de la base de datos');
 			console.log(err);
+			res.render('404.hbs',err)
 		}
 	});
 }

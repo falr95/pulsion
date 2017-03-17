@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Pulsión - where the magic begins</title>
+		<script type="text/javascript" src="/js/angular.min.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/general.css">
+		<link rel="stylesheet" type="text/css" href="/css/mobile/general.css">
+		<style type="text/css">
+		body{background-color: rgb(64,48,25);}
+			#portada{
+				background-image: url("/images/theWho404.jpg");
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				min-height: 500px;
+				position: relative;
+				padding-top: 7%;
+			}
+			#portada div{position: absolute;bottom: 0;}
+			#portada h1{margin-bottom: 0;}
+		</style>
+	</head>
+	<body ng-controller="mainCtrl">
+		<div ng-include="'/templates/nav.html'"></div>
+		<div id="portada">
+			<div>
+				<h1>404 - No existe la ruta que solicitaste!</h1>
+				<a href="/">VOLVER A PAGINA PRINCIPAL</a>
+				<a href="#" onclick="window.history.back()">IR ATRAS</a>
+			</div>
+		</div>
+	</body>
+</html>

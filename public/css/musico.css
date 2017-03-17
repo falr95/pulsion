@@ -15,7 +15,7 @@ body{background-color: rgb(64,48,25);font-family: abeat;}
 #musicianData #redes img{width: 90px;}
 #musicianData #redes{margin: auto;padding-top: 10px;}
 
-#videoList{padding: 20px 6%;background-color: black;}
+#videoList{white-space: nowrap;overflow: overlay;margin: 0;padding: 20px 6%;background-color: black;}
 
 #bio{padding: 1% 0;width: 85%;margin: auto;font-size: 23px;}
 #bio h2{font-size: 40px;font-family: prototype;margin: 0;}
