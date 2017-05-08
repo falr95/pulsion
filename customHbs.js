@@ -39,12 +39,24 @@ module.exports = {
 			return new hbs.SafeString(result.join(''));
 		});
 		hbs.registerHelper('age',function(birthDate){
-			var now = new Date();
-			var years = now.getYear() - birthDate.getYear();
-			if(birthDate.getMonth() < now.getMonth() && birthDate.getDate() < now.getDate()){
-				years += 1;
+			if(birthDate){
+				var now = new Date();
+				var years = now.getYear() - birthDate.getYear();
+				if(birthDate.getMonth() < now.getMonth() && birthDate.getDate() < now.getDate()){
+					years += 1;
+				}
+				return now.getYear() - birthDate.getYear();
+			}else{
+				return "Desconocido"
 			}
-			return now.getYear() - birthDate.getYear();
+		});
+
+		hbs.registerHelper('nice-date',function(date){
+			if(date){
+				return date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+			}else{
+				return "Desconocido"
+			}
 		});
 	}
 }

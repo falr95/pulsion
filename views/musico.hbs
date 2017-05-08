@@ -45,10 +45,12 @@
 		</div>
 		<div id="videoList">
 			{{#each musico.videos}}
-			<a href="/video/{{_id}}"><li class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><div href="" class="text"><h2>Tal Zapada</h2><h3>Tal Pulsion</h3></div></div></li></a>{{/each}}
+			<a href="/video/{{_id}}"><li class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><div href="" class="text"><h2>{{nombre}}</h2><h3>{{genero}}</h3></div></div></li></a>{{/each}}
 		</div>
-		<div id="bio">
-			<h2>Bio</h2><p>{{musico.bio}}</p>
-		</div>
+		{{#if musico.bio}}
+			<div id="bio">
+				<h2>Bio</h2><p>{{musico.bio}}</p>
+			</div>
+		{{/if}}
 	</body>
 </html>

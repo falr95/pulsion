@@ -32,10 +32,10 @@
 				<img src="/images/logoVideoLanding.svg">
 				<div class="text">
 					<h1 class="videoName">{{video.nombre}}</h1>
-					<h1 class="videoFecha">{{video.fecha}}</h1>
+					<h1 class="videoFecha">{{nice-date video.fecha}}</h1>
 					<h2>
 						{{#each video.roles}}
-							<a href="/musico/{{musico._id}}">{{musico.nombre}} ({{instrumento}})</a>
+							<a href="/musico/{{_id}}">{{nombre}} ({{instrumento}})</a>
 						{{/each}}
 					</h2>
 					<h2>
@@ -61,170 +61,20 @@
 		</div>
 		<div id="description">
 			<p>
-				Sed ante nulla, commodo imperdiet turpis et, ultrices eleifend ligula. Nam nisl mi, luctus a ipsum nec, mattis tincidunt tellus. Nunc id porttitor orci. Etiam mattis dictum purus a finibus. Nullam placerat porta venenatis. Morbi varius diam a iaculis aliquam. Phasellus cursus vitae lorem nec scelerisque. Proin egestas tristique finibus. Praesent consectetur sem quis quam sodales, sit amet tincidunt ligula vestibulum. Suspendisse mattis blandit lacus, vel rhoncus dui luctus ac. Sed sit amet mi quis turpis ullamcorper tempor. Vivamus ut arcu ultricies, efficitur quam sit amet, tempor sapien. Nunc nec est laoreet, bibendum erat sed, malesuada massa. Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
+				{{#if descripcion}}{{descripcion}}{{/if}}
 			</p>
 		</div>
 		<div id="videoList" class="clearfix">
 			<div class="left">
 				<h2>Videos Relacionados</h2>
 				<div class="videoContainer">
-					<div class="video">
-						<div class="videoThumb">
-							<div class="videoData">
-								<img src="/images/logoThumb.svg">
-								<div class="text">
-									<h2>Tal Zapada</h2>
-									<h3>Tal Pulsion</h3>
-								</div>
-							</div>
-						</div>
-						<div class="videoDesc">
-							<p>
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-							</p>
-						</div>
-					</div>
-					<div class="video">
-						<div class="videoThumb">
-							<div class="videoData">
-								<img src="/images/logoThumb.svg">
-								<div class="text">
-									<h2>Tal Zapada</h2>
-									<h3>Tal Pulsion</h3>
-								</div>
-							</div>
-						</div>
-						<div class="videoDesc">
-							<p>
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-							</p>
-						</div>
-					</div>
-					<div class="video">
-						<div class="videoThumb">
-							<div class="videoData">
-								<img src="/images/logoThumb.svg">
-								<div class="text">
-									<h2>Tal Zapada</h2>
-									<h3>Tal Pulsion</h3>
-								</div>
-							</div>
-						</div>
-						<div class="videoDesc">
-							<p>
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-							</p>
-						</div>
-					</div>
-					<div class="video">
-						<div class="videoThumb">
-							<div class="videoData">
-								<img src="/images/logoThumb.svg">
-								<div class="text">
-									<h2>Tal Zapada</h2>
-									<h3>Tal Pulsion</h3>
-								</div>
-							</div>
-						</div>
-						<div class="videoDesc">
-							<p>
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-							</p>
-						</div>
-					</div>
+					{{#each video.relacionados}}<a href="/video/{{_id}}"><div class="video"><div class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><div class="text"><h2>{{nombre}}</h2><h3>{{genero}}</h3></div></div></div><div class="videoDesc"><p>{{descripcion}}</p></div></div></a>{{/each}}
 				</div>
 			</div>
 			<div class="right">
 				<h2>Videos de la misma pulsión</h2>
 				<div class="videoContainer">
-					<div class="video">
-						<div class="videoThumb">
-							<div class="videoData">
-								<img src="/images/logoThumb.svg">
-								<div class="text">
-									<h2>Tal Zapada</h2>
-									<h3>Tal Pulsion</h3>
-								</div>
-							</div>
-						</div>
-						<div class="videoDesc">
-							<p>
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-							</p>
-						</div>
-					</div>
-					<div class="video">
-						<div class="videoThumb">
-							<div class="videoData">
-								<img src="/images/logoThumb.svg">
-								<div class="text">
-									<h2>Tal Zapada</h2>
-									<h3>Tal Pulsion</h3>
-								</div>
-							</div>
-						</div>
-						<div class="videoDesc">
-							<p>
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-							</p>
-						</div>
-					</div>
-					<div class="video">
-						<div class="videoThumb">
-							<div class="videoData">
-								<img src="/images/logoThumb.svg">
-								<div class="text">
-									<h2>Tal Zapada</h2>
-									<h3>Tal Pulsion</h3>
-								</div>
-							</div>
-						</div>
-						<div class="videoDesc">
-							<p>
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-							</p>
-						</div>
-					</div>
-					<div class="video">
-						<div class="videoThumb">
-							<div class="videoData">
-								<img src="/images/logoThumb.svg">
-								<div class="text">
-									<h2>Tal Zapada</h2>
-									<h3>Tal Pulsion</h3>
-								</div>
-							</div>
-						</div>
-						<div class="videoDesc">
-							<p>
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-								Nam rhoncus neque et elit pulvinar blandit. Nam commodo sapien ac nunc convallis feugiat. Vivamus consectetur, sapien sed placerat condimentum, massa mi euismod metus, et condimentum nisl diam sit amet lorem.
-							</p>
-						</div>
-					</div>
+					{{#each video.mismaSede}}<a href="/video/{{_id}}"><div class="video"><div class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><div class="text"><h2>{{nombre}}</h2><h3>{{genero}}</h3></div></div></div><div class="videoDesc"><p>{{descripcion}}</p></div></div></a>{{/each}}
 				</div>
 			</div>
 		</div>

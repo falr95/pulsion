@@ -30,7 +30,7 @@
 			<carousel-item src="portada9.jpg"></carousel-item>
 		</div>
 		<ul id="videoList">
-			{{#each videos}}<a href="/video/{{_id}}"><li class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><div class="text"><h2>{{this.nombre}}</h2><h3>{{fecha}}</h3></div></div></li></a>{{/each}}
+			{{#each videos}}<a href="/video/{{_id}}"><li class="videoThumb" set-thumb="{{link}}"><div class="videoData"><img src="/images/logoThumb.svg"><div class="text"><h2>{{this.nombre}}</h2><h3>{{nice-date fecha}}</h3></div></div></li></a>{{/each}}
 		</ul>
 	</body>
 </html>

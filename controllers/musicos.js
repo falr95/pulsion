@@ -6,10 +6,10 @@ function getMusicianData(musicoId, callback) {
 	var collectionVideos = app.db.collection('videos');
 	var collectionBandas = app.db.collection('bandas');
 	var collectionMusicos = app.db.collection('musicos');
-	function getMusician(cb){
+	function getMusician(cb, errCb){
 		collectionMusicos.findOne({_id:new mongo.ObjectID(musicoId)}, function(err, musico){
 			if(err || !musico){
-				throw err;
+				cb(new Error("musician not found"))
 			}else{
 				Object.assign(ourMusician, musico);
 				cb();
@@ -28,14 +28,14 @@ function getMusicianData(musicoId, callback) {
 				}
 			})
 		}else{
-			resolve()
+			cb();
 		}
 	}
 	function getVideos(cb){
 		collectionVideos.find({"roles":{$elemMatch: {"_id":new mongo.ObjectID(musicoId)}}}).toArray(function(err, videosMusico){
 			if(!err && videosMusico){
 				ourMusician.videos = videosMusico;
-				cb(err, ourMusician);
+				cb(ourMusician);
 			}else{
 				throw err;
 			}
@@ -60,32 +60,37 @@ function getMusicianData(musicoId, callback) {
 				}
 			})
 		}else{
-			cb(err, ourMusician);
+			cb(ourMusician);
 		}
 	}
 	try{
-		getMusician(function(){
-			getBands(function(){
-				getVideos(function(){
-					getPartners(function(err){
-						callback(err, ourMusician)
+		getMusician(function(err){
+			if(err){
+				callback(ourMusician, err);
+			}else{
+				getBands(function(){
+					getVideos(function(){
+						getPartners(function(result, err){
+							callback(ourMusician)
+						})
 					})
 				})
-			})
+			}
 		})
 	}catch(err){
-		callback(err, ourMusician)
+		console.log("cayó al catch");
+		callback(ourMusician, err)
 	}
 }
 
 var musicoController = function(req, res) {
-	getMusicianData(req.params.id, function(err, docs) {
+	getMusicianData(req.params.id, function(docs, err) {
 		if (err == null) {
 			console.log("No hubieron errores");
 			res.render('musico', {musico:docs});
 		} else {
 			console.log('Error al recuperar información de la base de datos');
-			console.log(err);
+			console.log("log en el else",err);
 			res.render('404.hbs',err)
 		}
 	});
